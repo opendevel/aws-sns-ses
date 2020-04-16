@@ -1,7 +1,11 @@
 {
     "name": "opendevel/aws-sns-ses",
     "require": {
-        "php": ">=7.1"
+        "php": ">=7.1",
+        "ext-json": "*",
+        "aws/aws-php-sns-message-validator": "^1.6",
+        "consistence/consistence": "^1.0 || ^2.0",
+        "smartemailing/types": "^1.0"
     },
     "require-dev": {
         "phpstan/phpstan": "^0.12",
