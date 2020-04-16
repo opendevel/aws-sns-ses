@@ -1,0 +1,1 @@
+opendevel/aws-sns-ses
