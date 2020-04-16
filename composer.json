@@ -1,0 +1,33 @@
+{
+    "name": "opendevel/aws-sns-ses",
+    "require": {
+        "php": ">=7.1"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^0.12",
+        "phpunit/phpunit": "^8.0",
+        "squizlabs/php_codesniffer": "^3.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Opendevel\\Aws\\SnsSes\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Opendevel\\Aws\\SnsSes\\": "tests"
+        }
+    },
+    "scripts": {
+        "phpunit": "phpunit --colors=always -c phpunit.xml",
+        "phpcbf": "phpcbf --standard=PSR12 --extensions=php --encoding=utf-8 --tab-width=4 -spv src tests",
+        "phpcs": "phpcs --standard=PSR12 --extensions=php --encoding=utf-8 --tab-width=4 -spv src tests",
+        "phpstan": "phpstan analyse -l 7 --memory-limit=500M --debug -c phpstan.neon",
+        "test": [
+            "@phpcbf",
+            "@phpcs",
+            "@phpstan",
+            "@phpunit"
+        ]
+    }
+}
